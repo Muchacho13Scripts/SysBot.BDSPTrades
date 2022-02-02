@@ -192,11 +192,11 @@ namespace SysBot.Pokemon.Discord
         {
             foreach (var pk in pks)
             {
-                if (!pk.CanBeTraded())
-                {
-                    await ReplyAsync("Provided Pokémon content is blocked from trading!").ConfigureAwait(false);
-                    return;
-                }
+               // if (!pk.CanBeTraded())
+               // {
+               //     await ReplyAsync("Provided Pokémon content is blocked from trading!").ConfigureAwait(false);
+               //     return;
+               // }
 
                 var la = new LegalityAnalysis(pk);
                 if (!la.Valid)

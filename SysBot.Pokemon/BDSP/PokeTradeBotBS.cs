@@ -206,7 +206,7 @@ namespace SysBot.Pokemon
 
         private void SetText(SAV8BS sav, string text)
         {
-            System.IO.File.WriteAllText($"code{sav.OT}-{sav.DisplayTID}.txt", text);
+            System.IO.File.WriteAllText($"LinkCode-{Connection.Name}.txt", text);
         }
 
         private async Task<PokeTradeResult> PerformLinkCodeTrade(SAV8BS sav, PokeTradeDetail<PB8> poke, CancellationToken token)
@@ -229,7 +229,7 @@ namespace SysBot.Pokemon
             if (poke.Type == PokeTradeType.Random)
                 SetText(sav, $"Trade code: {poke.Code:0000 0000}\r\nSending: {(Species)poke.FirstData.Species}");
             else
-                SetText(sav, "Running a\nSpecific trade.");
+                SetText(sav, "Running a\nSubscriber trade.");
 
             // Go into the union room and start telling everyone we're looking for a trade partner
             if (poke.Type != PokeTradeType.Random)

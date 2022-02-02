@@ -42,8 +42,8 @@ namespace SysBot.Pokemon
         [Category(TradeConfig), Description("If not empty, the provided string will be appended to Echo alerts to notify whomever you specify when a user is found using multiple accounts. For Discord, use <@userIDnumber> to mention.")]
         public string MultiAbuseEchoMention { get; set; } = string.Empty;
 
-        [Category(TradeConfig), Description("Maximum amount of trades allowed using PB8 files, between 1 and 3.")]
-        public int MaximumAttachmentsAllowed { get => maxAttachments; set => maxAttachments = Math.Min(value, 3); }
+        [Category(TradeConfig), Description("Maximum amount of trades allowed using PB8 files, between 1 and 100.")]
+        public int MaximumAttachmentsAllowed { get => maxAttachments; set => maxAttachments = Math.Min(value, 100); }
 
         /// <summary>
         /// Gets a random trade code based on the range settings.
